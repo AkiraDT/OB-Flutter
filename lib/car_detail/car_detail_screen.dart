@@ -8,8 +8,7 @@ class CarDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ScopedReader watch) {
     final _index = ModalRoute.of(context)!.settings.arguments as int;
-    final _carDatas = watch(CarListProvider);
-    final Car _carData = _carDatas[_index];
+    final Car _carData = watch(CarListProvider).elementAt(_index);
 
     return Scaffold(
       appBar: AppBar(

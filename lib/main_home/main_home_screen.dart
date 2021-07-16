@@ -63,15 +63,11 @@ class MainHomeScreen extends StatelessWidget {
                                     .handleSwitch(),
                                 if (_switchVal)
                                   {
-                                    context
-                                        .read(themeProvider.notifier)
-                                        .setLight()
+                                    context.read(themeProvider.notifier).setLight()
                                   }
                                 else
                                   {
-                                    context
-                                        .read(themeProvider.notifier)
-                                        .setDark()
+                                    context.read(themeProvider.notifier).setDark()
                                   }
                               });
                     }),
@@ -80,30 +76,26 @@ class MainHomeScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Expanded(
-                              child:
-                                  InkWell(
-                                      onTap: () => {
-                                            Navigator.pushNamed(
-                                                context, '/carList')
-                                          },
-                                      child: Container(
-                                        alignment: Alignment.center,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          color: Theme.of(context).buttonColor,
-                                        ),
-                                        height: 57,
-                                        width: 305,
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 12, vertical: 8),
-                                        child: Text("Continue",
-                                            style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.white)),
-                                      ))
-                              ),
+                              child: InkWell(
+                                  onTap: () => {
+                                        Navigator.pushNamed(context, '/carList')
+                                      },
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Theme.of(context).buttonColor,
+                                    ),
+                                    height: 57,
+                                    width: 305,
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 8),
+                                    child: Text("Continue",
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white)),
+                                  ))),
                         ],
                       ),
                     )
