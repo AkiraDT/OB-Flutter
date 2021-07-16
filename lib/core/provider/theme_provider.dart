@@ -9,7 +9,9 @@ final darkTheme = ThemeData(
     accentColor: Colors.white,
     accentIconTheme: IconThemeData(color: const Color(0xFF191D21)),
     dividerColor: const Color(0xFF191D21),
-    fontFamily: 'Poppins');
+    fontFamily: 'Poppins',
+    buttonColor: Color(0XFF1814E4)
+);
 
 final lightTheme = ThemeData(
     primarySwatch: Colors.grey,
@@ -20,6 +22,7 @@ final lightTheme = ThemeData(
     accentIconTheme: IconThemeData(color: Colors.white),
     dividerColor: Colors.white54,
     fontFamily: 'Poppins',
+    buttonColor: Color(0XFFFA7F35),
 );
 
 final themeProvider = StateNotifierProvider((ref) => ThemeState());
