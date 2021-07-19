@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CarAppBar extends StatelessWidget{
+class CarAppBar extends StatelessWidget implements PreferredSizeWidget{
+  final toolbarHeight;
+  final bottom;
+  String title;
+
+  CarAppBar(this.title, {Key? key, this.toolbarHeight, this.bottom}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -12,7 +18,7 @@ class CarAppBar extends StatelessWidget{
         ),
       ),
       title: Text(
-        'Cars',
+        this.title,
         style: TextStyle(
           fontWeight: FontWeight.bold,
         ),
@@ -42,5 +48,9 @@ class CarAppBar extends StatelessWidget{
       ],
     );
   }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size.fromHeight(toolbarHeight ?? kToolbarHeight + (bottom?.preferredSize.height ?? 0.0));
 
 }
